@@ -9,10 +9,12 @@ $light-brown: #5F634F;
 	margin:0px;
 }
 #background{
-	background-image: url(images/coffee-background.jpg);
+	background-image: url("../images/coffee_background.jpg") !important;
 	background-size: cover;
 	width:100vw;
-	height:100vh;
+	height:100%;
+	background-color: rgba(81, 90, 118, 0.87);
+	background-repeat: no-repeat;
 }
 nav{
 	@include zeroes;
