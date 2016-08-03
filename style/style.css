@@ -1,5 +1,36 @@
-.background {
+#background {
   background-image: url(images/coffee-background.jpg);
-  background-size: cover; }
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; }
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 75px;
+  background-color: #4FE2BE;
+  color: #fff; }
+  nav :last-child {
+    float: right; }
+  nav :first-child {
+    float: left; }
+    nav :first-child li img {
+      max-height: 75px;
+      margin: 0px 20px; }
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  display: inline; }
+
+li {
+  display: inline;
+  margin: 0px 10px; }
+
+body {
+  color: blue;
+  margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */

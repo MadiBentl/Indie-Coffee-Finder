@@ -4,7 +4,42 @@ $white: #fff;
 $coffee-brown: #443627;
 $light-brown: #5F634F;
 
-.background{
+@mixin zeroes{
+	padding:0px;
+	margin:0px;
+}
+#background{
 	background-image: url(images/coffee-background.jpg);
 	background-size: cover;
+	width:100vw;
+	height:100vh;
+}
+nav{
+	@include zeroes;
+	width:100vw;
+	height:75px;
+	background-color: $brand-colour;
+	color: $white;
+	:last-child{
+		float:right;
+	}:first-child{
+		float:left;
+		li img{
+			max-height: 75px;
+			margin:0px 20px;
+		}
+	}
+}
+ul{
+	@include zeroes;
+	text-decoration: none;
+	display:inline;
+}
+li{
+	display: inline;
+	margin: 0px 10px;
+}
+body{
+	color: blue;
+	margin:0px;
 }
