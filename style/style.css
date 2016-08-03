@@ -4,7 +4,8 @@
   width: 100vw;
   height: 100%;
   background-color: rgba(81, 90, 118, 0.87);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: bottom; }
 
 nav {
   padding: 0px;
