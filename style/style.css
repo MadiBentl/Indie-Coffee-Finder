@@ -13,9 +13,13 @@ nav {
   width: 100vw;
   height: 75px;
   background-color: #4FE2BE;
-  color: #fff; }
+  color: #443627; }
   nav :last-child {
-    float: right; }
+    float: right;
+    margin-right: 20px; }
+    nav :last-child li {
+      font-size: 1.3em;
+      line-height: 3.5em; }
   nav :first-child {
     float: left; }
     nav :first-child li img {

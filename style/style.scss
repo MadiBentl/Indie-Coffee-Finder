@@ -22,9 +22,14 @@ nav{
 	width:100vw;
 	height:75px;
 	background-color: $brand-colour;
-	color: $white;
+	color: $coffee-brown;
 	:last-child{
 		float:right;
+		li{
+			font-size:1.3em;
+			line-height: 3.5em;
+		}
+		margin-right: 20px;
 	}:first-child{
 		float:left;
 		li img{
