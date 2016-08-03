@@ -1,3 +1,7 @@
+* {
+  font-family: "Biryani", sans-serif;
+  font-weight: 300; }
+
 #background {
   background-image: url("../images/coffee_background.jpg") !important;
   background-size: cover;
@@ -8,6 +12,7 @@
   background-position: bottom; }
 
 nav {
+  position: fixed;
   padding: 0px;
   margin: 0px;
   width: 100vw;
@@ -18,8 +23,8 @@ nav {
     float: right;
     margin-right: 20px; }
     nav :last-child li {
-      font-size: 1.3em;
-      line-height: 3.5em; }
+      font-size: 1.2em;
+      line-height: 3.8em; }
   nav :first-child {
     float: left; }
     nav :first-child li img {
@@ -34,7 +39,7 @@ ul {
 
 li {
   display: inline;
-  margin: 0px 10px; }
+  margin: 0px 20px; }
 
 body {
   color: blue;

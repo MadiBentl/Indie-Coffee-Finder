@@ -3,7 +3,10 @@ $tamer-brand-colour: #9BC4CB;
 $white: #fff;
 $coffee-brown: #443627;
 $light-brown: #5F634F;
-
+*{
+	font-family: "Biryani", sans-serif;
+	font-weight: 300;
+}
 @mixin zeroes{
 	padding:0px;
 	margin:0px;
@@ -18,6 +21,7 @@ $light-brown: #5F634F;
 	background-position:bottom;
 }
 nav{
+	position:fixed;
 	@include zeroes;
 	width:100vw;
 	height:75px;
@@ -26,8 +30,8 @@ nav{
 	:last-child{
 		float:right;
 		li{
-			font-size:1.3em;
-			line-height: 3.5em;
+			font-size:1.2em;
+			line-height: 3.8em;
 		}
 		margin-right: 20px;
 	}:first-child{
@@ -45,7 +49,7 @@ ul{
 }
 li{
 	display: inline;
-	margin: 0px 10px;
+	margin: 0px 20px;
 }
 body{
 	color: blue;
