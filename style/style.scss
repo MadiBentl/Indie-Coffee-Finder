@@ -42,6 +42,10 @@ nav{
 		}
 	}
 }
+#map{
+	height:500px;
+	width:500px;
+}
 ul{
 	@include zeroes;
 	text-decoration: none;

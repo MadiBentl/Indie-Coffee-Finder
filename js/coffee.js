@@ -1,22 +1,20 @@
 $(document).ready(function(){
-	$('h1').css('color', 'red');
+
 });
-
-getLocation();
-
-var x = document.getElementById("map-container");
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
-}
-
+var map;
+function initMap() {
+	var myLatLng = {lat: 49.283, lng: -123.120};
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 49.283, lng: -123.120},
+        scrollwheel: false,
+        zoom: 6
+    });
+    var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+    })
+};
 
 
 

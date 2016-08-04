@@ -31,6 +31,10 @@ nav {
       max-height: 75px;
       margin: 0px 20px; }
 
+#map {
+  height: 500px;
+  width: 500px; }
+
 ul {
   padding: 0px;
   margin: 0px;
