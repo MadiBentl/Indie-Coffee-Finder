@@ -9,7 +9,30 @@
   height: 100%;
   background-color: rgba(81, 90, 118, 0.87);
   background-repeat: no-repeat;
-  background-position: bottom; }
+  background-position: bottom;
+  position: fixed;
+  top: 75px; }
+
+#title {
+  background-color: #443627;
+  opacity: 0.9;
+  color: #fff;
+  width: 20%;
+  margin: 30px; }
+  #title h1 {
+    opacity: 1;
+    text-align: center;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 64px; }
+    #title h1 span {
+      font-family: "Amatic SC", cursive;
+      font-size: 120px;
+      line-height: 100%;
+      margin: 20px; }
+  #title h2 {
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    font-size: 36px; }
 
 nav {
   position: fixed;
@@ -33,7 +56,7 @@ nav {
 
 #map {
   height: 500px;
-  width: 500px; }
+  top: 100vh; }
 
 ul {
   padding: 0px;

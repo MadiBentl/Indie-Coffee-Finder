@@ -19,6 +19,33 @@ $light-brown: #5F634F;
 	background-color: rgba(81, 90, 118, 0.87);
 	background-repeat: no-repeat;
 	background-position:bottom;
+
+	position:fixed;
+	top:75px;
+}
+#title{
+	background-color: $coffee-brown;
+	opacity: 0.9;
+	color:$white;
+	width:20%;
+	margin: 30px;
+	h1{
+		opacity:1;
+		text-align: center;
+		font-family: "Amatic SC", sans-serif;
+		font-size: 64px;
+		span{
+			font-family: "Amatic SC", cursive;
+			font-size: 120px;
+			line-height: 100%;
+			margin:20px;
+		}
+	}
+	h2{
+		font-family: "Amatic SC", cursive;
+		text-align:center;
+		font-size: 36px;
+	}
 }
 nav{
 	position:fixed;
@@ -44,7 +71,7 @@ nav{
 }
 #map{
 	height:500px;
-	width:500px;
+	top:100vh;
 }
 ul{
 	@include zeroes;
