@@ -22,6 +22,7 @@ $light-brown: #5F634F;
 
 	position:fixed;
 	top:75px;
+	z-index: 0;
 }
 #title{
 	background-color: $coffee-brown;
@@ -50,6 +51,7 @@ $light-brown: #5F634F;
 nav{
 	position:fixed;
 	@include zeroes;
+	z-index: 200;
 	width:100vw;
 	height:75px;
 	background-color: $brand-colour;
@@ -69,9 +71,18 @@ nav{
 		}
 	}
 }
-#map{
-	height:500px;
+#scrollpage{
+	z-index: 1;
+	height:300px;
+	width: 100vw;
 	top:100vh;
+	background-color: $coffee-brown;
+	position: absolute;
+}
+#map{
+	height:300px;
+	width: 40vw;
+	margin:30px;
 }
 ul{
 	@include zeroes;

@@ -11,7 +11,8 @@
   background-repeat: no-repeat;
   background-position: bottom;
   position: fixed;
-  top: 75px; }
+  top: 75px;
+  z-index: 0; }
 
 #title {
   background-color: #443627;
@@ -38,6 +39,7 @@ nav {
   position: fixed;
   padding: 0px;
   margin: 0px;
+  z-index: 200;
   width: 100vw;
   height: 75px;
   background-color: #4FE2BE;
@@ -54,9 +56,18 @@ nav {
       max-height: 75px;
       margin: 0px 20px; }
 
+#scrollpage {
+  z-index: 1;
+  height: 300px;
+  width: 100vw;
+  top: 100vh;
+  background-color: #443627;
+  position: absolute; }
+
 #map {
-  height: 500px;
-  top: 100vh; }
+  height: 300px;
+  width: 40vw;
+  margin: 30px; }
 
 ul {
   padding: 0px;
