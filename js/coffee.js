@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 });
- getLocation();
+
+ /*getLocation();
 
 var location,
 	latt,
@@ -46,7 +47,7 @@ function initMap() {
     })
 };
 
-
+*/
 
 /*#header
 #container
