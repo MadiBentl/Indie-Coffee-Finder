@@ -73,16 +73,25 @@ nav{
 }
 #scrollpage{
 	z-index: 1;
-	height:300px;
+	height:calc(100vh - 75px);
 	width: 100vw;
 	top:100vh;
 	background-color: $coffee-brown;
 	position: absolute;
+	div{
+		float:left;
+	}
 }
 #map{
-	height:300px;
-	width: 40vw;
+	height:400px;
+	width: calc(50vw - 30px);
 	margin:30px;
+}
+#cafeInfo{
+	width: calc(50vw - 30px);
+	h2{
+		color: $tamer-brand-colour;
+	}
 }
 ul{
 	@include zeroes;
@@ -94,6 +103,5 @@ li{
 	margin: 0px 20px;
 }
 body{
-	color: blue;
 	margin:0px;
 }

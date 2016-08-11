@@ -58,16 +58,23 @@ nav {
 
 #scrollpage {
   z-index: 1;
-  height: 300px;
+  height: calc(100vh - 75px);
   width: 100vw;
   top: 100vh;
   background-color: #443627;
   position: absolute; }
+  #scrollpage div {
+    float: left; }
 
 #map {
-  height: 300px;
-  width: 40vw;
+  height: 400px;
+  width: calc(50vw - 30px);
   margin: 30px; }
+
+#cafeInfo {
+  width: calc(50vw - 30px); }
+  #cafeInfo h2 {
+    color: #9BC4CB; }
 
 ul {
   padding: 0px;
@@ -80,7 +87,6 @@ li {
   margin: 0px 20px; }
 
 body {
-  color: blue;
   margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */
