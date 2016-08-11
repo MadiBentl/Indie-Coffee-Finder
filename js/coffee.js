@@ -6,10 +6,13 @@ var map;
 var infoWindow;
 var service;
 
+var lattitude= 49.2827;
+var longitude= -123.1207;
+
 function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: new google.maps.LatLng(47.53772, -122.1153),
+        center: new google.maps.LatLng(lattitude, longitude),
         zoom: 11,
         styles: [
             {
@@ -35,10 +38,10 @@ function initialize() {
 function performSearch() {
     var request = {
         bounds: new google.maps.LatLngBounds(
-        new google.maps.LatLng(47.5204, -122.2047),
-        new google.maps.LatLng(47.5986, -122.0672)),
-        	keyword: 'park',
-			types: ['park']
+        new google.maps.LatLng((49.1827), (-123.2207)),
+        new google.maps.LatLng((49.3827), (-123.0207))),
+        	keyword: 'cafe',
+			types: ['cafe']
         };
     service.radarSearch(request, callback);
 }
@@ -49,6 +52,7 @@ function callback(results, status) {
         return;
     }
     for (var i = 0, result; result = results[i]; i++) {
+	    console.log(result[i]);
         createMarker(result);
     }
 }
