@@ -74,7 +74,9 @@ nav {
     #scrollpage h1 span {
       font-size: 64px;
       font-family: inherit;
-      color: #4FE2BE; }
+      color: #4FE2BE;
+      border-bottom: 4px solid #4FE2BE;
+      margin: 10px; }
 
 #map {
   height: 400px;
