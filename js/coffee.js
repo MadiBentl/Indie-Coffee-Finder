@@ -1,4 +1,15 @@
 $(document).ready(function(){
+	getlocation();
+	
+	function getlocation() {
+	    $.get("http://ipinfo.io", function(location) {
+	      console.log(location);
+	      
+	      $("#location")
+	        .append(location.city);
+	    }, "jsonp");
+	
+	  }
 
 });
 
@@ -80,7 +91,6 @@ function callback(results, status) {
         return;
     }
     for (var i = 0, result; result = results[i]; i++) {
-	    console.log(result);
         createMarker(result);
     }
 }
@@ -103,6 +113,7 @@ function createMarker(place) {
         });
     });
 }
+
 
       initialize();
       /*#header

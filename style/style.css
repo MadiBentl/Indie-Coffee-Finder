@@ -65,6 +65,16 @@ nav {
   position: absolute; }
   #scrollpage div {
     float: left; }
+  #scrollpage h1 {
+    color: #9BC4CB;
+    text-transform: uppercase;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 40px;
+    text-align: center; }
+    #scrollpage h1 span {
+      font-size: 64px;
+      font-family: inherit;
+      color: #4FE2BE; }
 
 #map {
   height: 400px;
@@ -73,8 +83,6 @@ nav {
 
 #cafeInfo {
   width: calc(50vw - 30px); }
-  #cafeInfo h2 {
-    color: #9BC4CB; }
 
 ul {
   padding: 0px;
