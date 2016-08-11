@@ -38,8 +38,8 @@ function initialize() {
 function performSearch() {
     var request = {
         bounds: new google.maps.LatLngBounds(
-        new google.maps.LatLng((49.1827), (-123.2207)),
-        new google.maps.LatLng((49.3827), (-123.0207))),
+        new google.maps.LatLng((lattitude - 0.1), (longitude - 0.1)),
+        new google.maps.LatLng((lattitude + 0.1), (longitude + 0.1))),
         	keyword: 'cafe',
 			types: ['cafe']
         };
