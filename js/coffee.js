@@ -15,6 +15,34 @@ function initialize() {
         center: new google.maps.LatLng(lattitude, longitude),
         zoom: 11,
         styles: [
+	        {
+		        featureType: 'all',
+	            stylers:[
+		            {saturation: -40}
+	            ]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [
+                { hue: 'white' },
+                { saturation: 30 }
+              ]
+            },
+            {featureType: 'poi',
+	            elementType: 'labels',
+	            stylers:[
+		            {visibility: 'off'}
+	            ]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [
+                { lightness: 100 },
+                { visibility: 'simplified' }
+              ]
+            },
             {
               stylers: [
                 { visibility: 'simplified' }
@@ -52,7 +80,7 @@ function callback(results, status) {
         return;
     }
     for (var i = 0, result; result = results[i]; i++) {
-	    console.log(result[i]);
+	    console.log(result);
         createMarker(result);
     }
 }
