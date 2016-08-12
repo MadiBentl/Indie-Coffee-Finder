@@ -1,9 +1,14 @@
+var lattitude= 49.2827;
+var longitude= -123.1207;
+
 $(document).ready(function(){
 	getlocation();
 	
 	function getlocation() {
 	    $.get("http://ipinfo.io", function(location) {
 	      console.log(location);
+	      lattitude= location.loc[0];
+	      longitude= location.loc[1];
 	      
 	      $("#location")
 	        .append(location.city);
@@ -16,9 +21,6 @@ $(document).ready(function(){
 var map;
 var infoWindow;
 var service;
-
-var lattitude= 49.2827;
-var longitude= -123.1207;
 
 function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -108,7 +110,6 @@ function createMarker(place) {
     google.maps.event.addListener(marker, 'click', function() {
         service.getDetails(place, function(result, status) {
             if (status != google.maps.places.PlacesServiceStatus.OK) {
-              	alert(status);
 			  	return;
             }
             infoWindow.setContent(result.name);
