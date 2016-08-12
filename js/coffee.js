@@ -1,16 +1,16 @@
-var lattitude = 49.2302,
-	longitude = -122.9952;
+var latitude= 49.2302,
+	longitude= -122.9952;
 
-$(document).ready(function(){
+var map;
+var infoWindow;
+var service;
+
+/*$(document).ready(function(){
 	getlocation();
 	
 	function getlocation() {
 	    $.get("http://ipinfo.io", function(location) {
 	      console.log(location);
-	      
-	      lattitude= location.loc.split(",")[0];
-	      longitude= location.loc.split(",")[1];
-	      console.log(lattitude + ", " + longitude);
 	      
 	      $("#location")
 	        .append(location.city);
@@ -18,16 +18,22 @@ $(document).ready(function(){
 	
 	  }
 
-});
+});*/
 
-var map;
-var infoWindow;
-var service;
-
+$.getJSON('https://freegeoip.net/json/') 
+     .done (function(location)
+     {
+          $('#location').append(location.city);
+          latitude= location.latitude;
+          longitude= location.longitude;
+          console.log(latitude + ", " + longitude);
+          console.log(location);
+     });
+     
 function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: new google.maps.LatLng(lattitude, longitude),
+        center: new google.maps.LatLng(latitude, longitude),
         zoom: 11,
 		scaleControl: false,
 		scrollwheel: false,
@@ -84,8 +90,8 @@ function initialize() {
 function performSearch() {
     var request = {
         bounds: new google.maps.LatLngBounds(
-        new google.maps.LatLng((lattitude - 0.1), (longitude - 0.1)),
-        new google.maps.LatLng((lattitude + 0.1), (longitude + 0.1))),
+        new google.maps.LatLng((latitude - 0.1), (longitude - 0.1)),
+        new google.maps.LatLng((latitude + 0.1), (longitude + 0.1))),
         	keyword: 'cafe',
 			types: ['cafe']
         };

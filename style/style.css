@@ -79,9 +79,13 @@ nav {
       margin: 10px; }
 
 #copyright {
-  text-align: center; }
+  width: 100vw; }
   #copyright p {
-    font-size: small; }
+    text-align: center;
+    font-size: small;
+    color: #5F634F; }
+    #copyright p a {
+      color: #9BC4CB; }
 
 #map {
   height: 400px;

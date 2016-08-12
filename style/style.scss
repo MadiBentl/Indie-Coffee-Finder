@@ -97,9 +97,14 @@ nav{
 	}
 }
 #copyright{
-	text-align: center;
+	width:100vw;
 	p{
+		text-align: center;
 		font-size: small;
+		color:$light-brown;
+		a{
+			color:$tamer-brand-colour;
+		}
 	}
 }
 #map{
