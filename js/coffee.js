@@ -90,8 +90,8 @@ function initialize() {
 function performSearch() {
     var request = {
         bounds: new google.maps.LatLngBounds(
-        new google.maps.LatLng((latitude - 0.1), (longitude - 0.1)),
-        new google.maps.LatLng((latitude + 0.1), (longitude + 0.1))),
+        new google.maps.LatLng((latitude - 0.3), (longitude - 0.3)),
+        new google.maps.LatLng((latitude + 0.3), (longitude + 0.3))),
         	keyword: 'cafe',
 			types: ['cafe']
         };
