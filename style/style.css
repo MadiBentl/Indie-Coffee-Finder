@@ -78,6 +78,11 @@ nav {
       border-bottom: 4px solid #4FE2BE;
       margin: 10px; }
 
+#copyright {
+  text-align: center; }
+  #copyright p {
+    font-size: small; }
+
 #map {
   height: 400px;
   width: calc(50vw - 30px);

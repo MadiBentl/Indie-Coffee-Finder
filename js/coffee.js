@@ -1,5 +1,5 @@
-var lattitude= 49.2827;
-var longitude= -123.1207;
+var lattitude = 49.2302,
+	longitude = -122.9952;
 
 $(document).ready(function(){
 	getlocation();
@@ -7,8 +7,10 @@ $(document).ready(function(){
 	function getlocation() {
 	    $.get("http://ipinfo.io", function(location) {
 	      console.log(location);
-	      lattitude= location.loc[0];
-	      longitude= location.loc[1];
+	      
+	      lattitude= location.loc.split(",")[0];
+	      longitude= location.loc.split(",")[1];
+	      console.log(lattitude + ", " + longitude);
 	      
 	      $("#location")
 	        .append(location.city);
@@ -26,7 +28,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: new google.maps.LatLng(lattitude, longitude),
-        zoom: 13,
+        zoom: 11,
 		scaleControl: false,
 		scrollwheel: false,
 		disableDoubleClickZoom: true,
