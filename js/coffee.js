@@ -24,7 +24,10 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: new google.maps.LatLng(lattitude, longitude),
-        zoom: 11,
+        zoom: 13,
+		scaleControl: false,
+		scrollwheel: false,
+		disableDoubleClickZoom: true,
         styles: [
 	        {
 		        featureType: 'all',
