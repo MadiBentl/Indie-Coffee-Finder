@@ -36,19 +36,7 @@ function getCity(){
 		$("#location").append(city);
 	});
 }
-
-/*
-$.getJSON('https://freegeoip.net/json/') 
-     .done (function(location)
-     {
-          $('#location').append(location.city);
-          latitude= location.latitude;
-          longitude= location.longitude;
-          console.log(latitude + ", " + longitude);
-          console.log(location);
-     });
-  */   
-  
+//HTML5 Geolocation Search
 function getGeoLocation(){
 	var x = document.getElementById("demo");
 	function getGeo() {
