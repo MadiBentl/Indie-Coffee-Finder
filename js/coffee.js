@@ -4,11 +4,20 @@ var latitude= 49.2302,
 var map;
 var infoWindow;
 var service;
+var city;
 
-/*$(document).ready(function(){
-	getlocation();
+$(document).ready(function(){	
+	getLocation();
+	initialize();
 	
-	function getlocation() {
+	function getLocation(){
+		if(getGeoLocation() != true){
+			getLocationWithIP();
+			getCity();
+		}
+	}
+	
+	function getLocationWithIP() {
 	    $.get("http://ipinfo.io", function(location) {
 	      console.log(location);
 	      
@@ -17,9 +26,18 @@ var service;
 	    }, "jsonp");
 	
 	  }
+});
 
-});*/
 
+function getCity(){
+	$.getJSON("http://www.geoplugin.net/json.gp?jsoncallback=?", function(data) {
+		var city = data.geoplugin_city;	
+		console.log(data.geoplugin_city);
+		$("#location").append(city);
+	});
+}
+
+/*
 $.getJSON('https://freegeoip.net/json/') 
      .done (function(location)
      {
@@ -29,7 +47,23 @@ $.getJSON('https://freegeoip.net/json/')
           console.log(latitude + ", " + longitude);
           console.log(location);
      });
-     
+  */   
+  
+function getGeoLocation(){
+	var x = document.getElementById("demo");
+	function getGeo() {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(showPosition);
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+	function showPosition(position) {
+	    latitude= position.coords.latitude;
+	    longitude= position.coords.longitude; 
+	}
+}
 function initialize() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,

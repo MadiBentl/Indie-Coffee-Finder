@@ -51,7 +51,7 @@ $light-brown: #5F634F;
 nav{
 	position:fixed;
 	@include zeroes;
-	z-index: 200;
+	z-index: -1;
 	width:100vw;
 	height:75px;
 	background-color: $brand-colour;
@@ -73,7 +73,7 @@ nav{
 }
 #scrollpage{
 	z-index: 1;
-	height:calc(100vh - 75px);
+	height: 100vh;
 	width: 100vw;
 	top:100vh;
 	background-color: $coffee-brown;
@@ -107,10 +107,14 @@ nav{
 		}
 	}
 }
+#coffeetitle{
+	width:100vw;
+}
 #map{
 	height:400px;
 	width: calc(50vw - 30px);
 	margin:30px;
+	border: 3px solid $tamer-brand-colour;
 }
 #cafeInfo{
 	width: calc(50vw - 30px);

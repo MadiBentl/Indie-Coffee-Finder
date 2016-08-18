@@ -39,7 +39,7 @@ nav {
   position: fixed;
   padding: 0px;
   margin: 0px;
-  z-index: 200;
+  z-index: -1;
   width: 100vw;
   height: 75px;
   background-color: #4FE2BE;
@@ -58,7 +58,7 @@ nav {
 
 #scrollpage {
   z-index: 1;
-  height: calc(100vh - 75px);
+  height: 100vh;
   width: 100vw;
   top: 100vh;
   background-color: #443627;
@@ -87,10 +87,14 @@ nav {
     #copyright p a {
       color: #9BC4CB; }
 
+#coffeetitle {
+  width: 100vw; }
+
 #map {
   height: 400px;
   width: calc(50vw - 30px);
-  margin: 30px; }
+  margin: 30px;
+  border: 3px solid #9BC4CB; }
 
 #cafeInfo {
   width: calc(50vw - 30px); }
