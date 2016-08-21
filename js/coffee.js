@@ -132,7 +132,7 @@ $(document).ready(function(){
 		var cafeDetails = {
 			name: result.name,
 			address: result.formatted_address,
-			hours: result.opening_hours
+			hours: result.opening_hours.periods[0].open.time + " - " + result.opening_hours.periods[0].close.time
 		};
 		for (detail in cafeDetails){
 			$('<div/>',{
