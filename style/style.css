@@ -64,6 +64,7 @@ nav {
   background-color: #443627;
   position: absolute; }
   #scrollpage div {
+    display: inline-block;
     float: left; }
   #scrollpage h1 {
     color: #9BC4CB;
@@ -97,7 +98,10 @@ nav {
   border: 3px solid #9BC4CB; }
 
 #cafeInfo {
-  width: calc(50vw - 30px); }
+  max-width: calc(50vw - 36x);
+  background-color: #5F634F;
+  color: #4FE2BE;
+  padding: 30px; }
 
 ul {
   padding: 0px;

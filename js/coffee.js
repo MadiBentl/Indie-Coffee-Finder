@@ -26,8 +26,8 @@ $(document).ready(function(){
 	    }, "jsonp");
 	
 	  }
-});
-
+	  
+	  
 
 function getCity(){
 	$.getJSON("http://www.geoplugin.net/json.gp?jsoncallback=?", function(data) {
@@ -131,8 +131,15 @@ function callback(results, status) {
 }
 
 function cafeInfo(result){
-	$('#cafeInfo').append(result.place_id);
-	console.log(result.place_id);
+	var cafeDetails = {
+		name: result.name,
+		address: result.formatted_address,
+		hours: result.opening_hours
+	};
+	for (detail in cafeDetails){
+		$('#cafeInfo').append(detail + ": " + cafeDetails[detail]);
+		console.log(cafeDetails[detail]);
+	}
 	
 }
 
@@ -157,6 +164,8 @@ function createMarker(place) {
 
 
       initialize();
+
+});
       /*#header
 #container
 #map-container

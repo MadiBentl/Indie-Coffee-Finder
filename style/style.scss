@@ -79,6 +79,7 @@ nav{
 	background-color: $coffee-brown;
 	position: absolute;
 	div{
+		display:inline-block;
 		float:left;
 	}
 	h1{
@@ -117,7 +118,10 @@ nav{
 	border: 3px solid $tamer-brand-colour;
 }
 #cafeInfo{
-	width: calc(50vw - 30px);
+	max-width: calc(50vw - 36x);
+	background-color: $light-brown;
+	color:$brand-colour;
+	padding: 30px;
 }
 ul{
 	@include zeroes;
