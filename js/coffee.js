@@ -130,6 +130,12 @@ function callback(results, status) {
     }
 }
 
+function cafeInfo(result){
+	$('#cafeInfo').append(result.place_id);
+	console.log(result.place_id);
+	
+}
+
 function createMarker(place) {
     var marker = new google.maps.Marker({
         map: map,
@@ -142,6 +148,7 @@ function createMarker(place) {
             if (status != google.maps.places.PlacesServiceStatus.OK) {
 			  	return;
             }
+            cafeInfo(result);
             infoWindow.setContent(result.name);
             infoWindow.open(map, marker);
         });
