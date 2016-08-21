@@ -123,6 +123,11 @@ nav{
 	color:$brand-colour;
 	padding: 30px;
 }
+.detail{
+	display:block !important;
+	border: red 2px solid;
+	float:none !important;
+}
 ul{
 	@include zeroes;
 	text-decoration: none;

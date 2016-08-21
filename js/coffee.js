@@ -128,14 +128,18 @@ $(document).ready(function(){
 	    }
 	}
 
-	function cafeInfo(result){
+	function createCafeInfo(result){
 		var cafeDetails = {
 			name: result.name,
 			address: result.formatted_address,
 			hours: result.opening_hours
 		};
 		for (detail in cafeDetails){
-			$('#cafeInfo').append(detail + ": " + cafeDetails[detail]);
+			$('<div/>',{
+				class: "detail",
+				text: detail + ": " + cafeDetails[detail]
+				}).appendTo("#cafeInfo");
+
 			console.log(cafeDetails[detail]);
 		}
 		
@@ -153,7 +157,7 @@ $(document).ready(function(){
 	            if (status != google.maps.places.PlacesServiceStatus.OK) {
 				  	return;
 	            }
-	            cafeInfo(result);
+	            createCafeInfo(result);
 	            infoWindow.setContent(result.name);
 	            infoWindow.open(map, marker);
 	        });

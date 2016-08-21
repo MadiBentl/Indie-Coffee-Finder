@@ -103,6 +103,11 @@ nav {
   color: #4FE2BE;
   padding: 30px; }
 
+.detail {
+  display: block !important;
+  border: red 2px solid;
+  float: none !important; }
+
 ul {
   padding: 0px;
   margin: 0px;
