@@ -126,6 +126,7 @@ $(document).ready(function(){
 	    for (var i = 0, result; result = results[i]; i++) {
 	        createMarker(result);
 	    }
+	    defaultMarker(results[0]);
 	}
 
 	function createCafeInfo(result){
@@ -134,15 +135,21 @@ $(document).ready(function(){
 			address: result.formatted_address,
 			hours: result.opening_hours.periods[0].open.time + " - " + result.opening_hours.periods[0].close.time
 		};
+		$("#cafeInfo").html("");
 		for (detail in cafeDetails){
 			$('<div/>',{
 				class: "detail",
-				text: detail + ": " + cafeDetails[detail]
+				text: cafeDetails[detail]
 				}).appendTo("#cafeInfo");
+			
 
 			console.log(cafeDetails[detail]);
 		}
 		
+	}
+	
+	function defaultMarker(cafe){
+		createCafeInfo(cafe);
 	}
 
 	function createMarker(place) {
