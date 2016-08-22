@@ -19,7 +19,6 @@ $(document).ready(function(){
 	
 	function getLocationWithIP() {
 	    $.get("http://ipinfo.io", function(location) {
-	      console.log(location);
 	      
 	      $("#location")
 	        .append(location.city);
@@ -30,7 +29,6 @@ $(document).ready(function(){
 	function getCity(){
 		$.getJSON("http://www.geoplugin.net/json.gp?jsoncallback=?", function(data) {
 			var city = data.geoplugin_city;	
-			console.log(data.geoplugin_city);
 			$("#location").append(city);
 		});
 	}
@@ -130,22 +128,37 @@ $(document).ready(function(){
 	}
 
 	function createCafeInfo(result){
+		var hours = fixHours(result);
+		console.log(result);
+		console.log(result.name);
 		var cafeDetails = {
 			name: result.name,
 			address: result.formatted_address,
-			hours: result.opening_hours.periods[0].open.time + " - " + result.opening_hours.periods[0].close.time
+			hours: hours
 		};
 		$("#cafeInfo").html("");
 		for (detail in cafeDetails){
-			$('<div/>',{
+			if (detail !== "undefined"){
+				$('<div/>',{
 				class: "detail",
 				text: cafeDetails[detail]
 				}).appendTo("#cafeInfo");
-			
-
-			console.log(cafeDetails[detail]);
+			}	
+		}	
+	}
+	
+	function fixHours(result){
+		if(typeof result.opening_hours === "undefined"){
+			if(typeof result.formatted_phone_number === "undefined"){
+				return "opening hours are unavailable";
+			}
+			else{
+				return "call for hours: " + result.formatted_phone_number;
+			}
 		}
-		
+		else{
+			return  result.opening_hours.periods[0].open.time + " - " + result.opening_hours.periods[0].close.time;
+		}
 	}
 	
 	function defaultMarker(cafe){
